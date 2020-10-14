@@ -1,0 +1,6 @@
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Pandas pivottables.js
+pivottablejs.html
