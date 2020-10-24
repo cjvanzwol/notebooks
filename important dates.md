@@ -11,6 +11,10 @@ from https://github.com/Noutfox/Corona
 23 maart: Extra maatregelen tegen coronavirus -> groepsvorming verboden
 26 maart: ingaan regelen groepsvorming
 
+## from https://www.nu.nl/coronavirus/6083846/ministerie-meldde-maandenlang-veel-te-weinig-opnames-coronapatienten.html
+- "Uit berekeningen van NU.nl blijkt dat het RIVM tussen 1 juli en 13 oktober ruim vijftienhonderd ziekenhuisopnames doorgaf. Stichting NICE meldde in dezelfde periode ruim 3.380 nieuwe opnames. Dat zijn er ruim twee keer zoveel als het RIVM rapporteerde. Het gaat om een verschil van maar liefst 1.880 opnames in ruim drie maanden tijd."
+- "Ziekenhuizen niet verplicht om gegevens met GGD te delen"
+
 ## from https://coronadashboard.government.nl/verantwoording
 - Correction figures of 2 September in the number of confirmed cases
 - Nursing homes:
