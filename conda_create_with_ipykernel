@@ -1,0 +1,44 @@
+#! /bin/sh
+echo "Setting up enviroment"
+read -p "What is the name for the enviroment? " envName
+read -p "What packages need to be installed on creation? [space seperated list; leave empty for None] " packages
+read -p "Are there any other options for conda create? [leave empty for None] " options
+echo "Setting up kernel"
+read -p "What is the name for the kernel? " kernelName
+read -p "What name should be displayed in Jupyter? " displayName 
+read -p "What location should the kernel be installed? [leave empty for default] " location
+
+if [[ $location == "" ]]; then
+    prefix=""
+    removeLocation=/usr/local/share/jupyter/kernels/$kernelName
+else
+    prefix="--prefix $location"
+    removeLocation=$location/share/jupyter/kernels/$kernelName
+fi
+
+if [[ $displayName == "" ]]; then
+    displayNameOption=""
+else
+    displayNameOption="--display-name $displayName"
+fi
+
+conda create --name $envName $packages $options -y -q
+source /opt/conda/bin/activate $envName
+
+conda install -y -q ipykernel
+python -m ipykernel install --name $kernelName
+conda deactivate
+conda env remove --name $envName
+rm -r $removeLocation
+
+echo "DEBUG"
+echo $envName
+echo $activatePath
+echo $packages
+echo $options
+echo $kernelName
+echo $displayName
+echo $location
+echo $prefix
+echo $removeLocation
+echo $USER
