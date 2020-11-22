@@ -31,6 +31,7 @@ conda deactivate
 conda env remove --name $envName
 rm -r $removeLocation
 
+<< COMMENT
 echo "DEBUG"
 echo $envName
 echo $activatePath
@@ -42,3 +43,4 @@ echo $location
 echo $prefix
 echo $removeLocation
 echo $USER
+COMMENT
