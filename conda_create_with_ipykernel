@@ -28,11 +28,12 @@ source /opt/conda/bin/activate $envName
 conda install -y -q ipykernel
 python -m ipykernel install --name $kernelName
 conda deactivate
+
+<< COMMENT
+echo  "Debug"
 conda env remove --name $envName
 rm -r $removeLocation
 
-<< COMMENT
-echo "DEBUG"
 echo $envName
 echo $activatePath
 echo $packages
