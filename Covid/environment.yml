@@ -1,0 +1,11 @@
+name: covid
+channels:
+  - conda-forge
+dependencies:
+  - ipykernel
+  - pandas
+  - matplotlib
+  - ipympl
+  - tabula-py
+  - pip:
+    - cbsodata

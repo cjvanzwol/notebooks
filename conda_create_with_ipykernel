@@ -1,7 +1,8 @@
 #! /bin/sh
 echo "Setting up enviroment"
 read -p "What is the name for the enviroment? " envName
-read -p "What packages need to be installed on creation? [space seperated list; leave empty for None] " packages
+read -p "What packages need to be installed on creation? [space seperated list; leave empty for None] " extra_packages
+read -p "What packages need to be installed with pip? [space seperated list; leave empty for None] " pip_packages 
 read -p "Are there any other options for conda create? [leave empty for None] " options
 echo "Setting up kernel"
 read -p "What is the name for the kernel? " kernelName
@@ -21,12 +22,15 @@ if [[ $displayName == "" ]]; then
 else
     displayNameOption="--display-name $displayName"
 fi
+packages="ipykernel $extra_packages"
 
 conda create --name $envName $packages $options -y -q
 source /opt/conda/bin/activate $envName
+conda config --add channels conda-forge
 
-conda install -y -q ipykernel
+#conda install -y -q ipykernel
 python -m ipykernel install --name $kernelName
+pip install $pip_packages
 conda deactivate
 
 << COMMENT

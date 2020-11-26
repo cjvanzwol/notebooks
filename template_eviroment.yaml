@@ -1,0 +1,8 @@
+name: covid
+channels:
+  - channel
+dependencies:
+  - conda_package
+  - conda_package=0.0.0.*
+  - pip:
+      - pip_package
