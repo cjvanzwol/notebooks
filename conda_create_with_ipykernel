@@ -30,7 +30,9 @@ conda config --add channels conda-forge
 
 #conda install -y -q ipykernel
 python -m ipykernel install --name $kernelName
-pip install $pip_packages
+if [[ $pip_packages != "" ]]; then
+	pip install $pip_packages
+fi
 conda deactivate
 
 << COMMENT
