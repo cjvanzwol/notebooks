@@ -24,6 +24,7 @@ echo ""
 conda env list
 read
 #check for conda
+cd Covid
 if [[ $(which conda) != "" ]]; then
     echo "DO CONDA MAGIC"
     if [[ -f ./environment.yml ]]; then
@@ -45,8 +46,6 @@ else
 fi
 exit
 
-<< COMMENT
-
 echo "Setting up kernel"
 read -p "What is the name for the kernel? " kernelName
 read -p "What name should be displayed in Jupyter? " displayName 
@@ -67,17 +66,17 @@ else
 fi
 packages="ipykernel $extra_packages"
 
-conda create --name $envName $packages $options -y -q
+#conda create --name $envName $packages $options -y -q
 source /opt/conda/bin/activate $envName
 conda config --add channels conda-forge
 
 #conda install -y -q ipykernel
 python -m ipykernel install --name $kernelName
-if [[ $pip_packages != "" ]]; then
-	pip install $pip_packages
-fi
+#if [[ $pip_packages != "" ]]; then
+#	pip install $pip_packages
+#fi
 conda deactivate
-COMMENT
+
 
 
 << COMMENT
