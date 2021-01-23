@@ -28,9 +28,9 @@ cd Covid
 if [[ $(which conda) != "" ]]; then
     echo "DO CONDA MAGIC"
     if [[ -f ./environment.yml ]]; then
-        envName=$(awk '/name/ {print $2}' environment.yml)
+        envName=$(awk '/name/ {print $2}' environment.yaml)
         echo $ENV_NAME
-        conda env create -f environment.yml
+        conda env create -f environment.yaml
     else
         read -p "What is the name for the enviroment? " envName
         read -p "What packages need to be installed on creation? [space seperated list; leave empty for None] " extra_packages
@@ -44,7 +44,6 @@ if [[ $(which conda) != "" ]]; then
 else
     echo "DO PIP"
 fi
-exit
 
 echo "Setting up kernel"
 read -p "What is the name for the kernel? " kernelName
@@ -66,7 +65,7 @@ else
 fi
 packages="ipykernel $extra_packages"
 
-#conda create --name $envName $packages $options -y -q
+conda create --name $envName $packages $options -y -q
 source /opt/conda/bin/activate $envName
 conda config --add channels conda-forge
 
