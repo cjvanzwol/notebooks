@@ -3,9 +3,11 @@ channels:
   - conda-forge
 dependencies:
   - ipykernel
+  - pip
   - pandas
   - matplotlib
   - ipympl
   - tabula-py
+  - beautifulsoup4
   - pip:
     - cbsodata

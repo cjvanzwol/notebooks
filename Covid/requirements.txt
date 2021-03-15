@@ -1,6 +1,6 @@
-ipykernel
 pandas
 matplotlib
 ipympl
 tabula-py
 cbsodata
+beautifulsoup4

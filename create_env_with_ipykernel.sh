@@ -22,27 +22,33 @@ echo ""
 
 # list enviroments
 conda env list
-read
+
+# list envorinment.yaml files
+echo "# environment.yaml files in repo:"
+echo "#"
+find $PWD -name environment.yaml
+echo ""
+
 #check for conda
-cd Covid
-if [[ $(which conda) != "" ]]; then
-    echo "DO CONDA MAGIC"
-    if [[ -f ./environment.yml ]]; then
-        envName=$(awk '/name/ {print $2}' environment.yaml)
-        echo $ENV_NAME
-        conda env create -f environment.yaml
+cd Covid # for testing script with Covid notebook repo.
+if [[ -f ./environment.yaml ]]; then
+    envName=$(awk '/name/ {print $2}' environment.yaml)
+    echo $ENV_NAME
+    conda env create -f environment.yaml
+elif [[ $(which conda) != "" ]]; then
+    read -p "What is the name for the enviroment? " envName
+    if [[ -f ./requirements.txt ]]; then
+        packages=$(cat ./requirements.txt)
     else
-        read -p "What is the name for the enviroment? " envName
         read -p "What packages need to be installed on creation? [space seperated list; leave empty for None] " extra_packages
-        if [[ -f ./requirements.txt ]]; then
-            pip install -r requirements.txt
-        else
-            read -p "What packages need to be installed with pip? [space seperated list; leave empty for None] " pip_packages 
-        fi
-        read -p "Are there any other options for conda create? [leave empty for None] " options
+        packages="ipykernel $extra_packages"
     fi
+    read -p "Are there any other options for conda create? [leave empty for None] " options
+    conda create -n $envName $packages $options -y -q
+    source /opt/conda/bin/activate $envName
+    conda config --add channels conda-forge
 else
-    echo "DO PIP"
+    echo "DO PIP & virtual env --> still needs to be coded"
 fi
 
 echo "Setting up kernel"
@@ -63,17 +69,8 @@ if [[ $displayName == "" ]]; then
 else
     displayNameOption="--display-name $displayName"
 fi
-packages="ipykernel $extra_packages"
 
-conda create --name $envName $packages $options -y -q
-source /opt/conda/bin/activate $envName
-conda config --add channels conda-forge
-
-#conda install -y -q ipykernel
 python -m ipykernel install --name $kernelName
-#if [[ $pip_packages != "" ]]; then
-#	pip install $pip_packages
-#fi
 conda deactivate
 
 
