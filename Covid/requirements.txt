@@ -8,3 +8,4 @@ beautifulsoup4
 html5lib
 urllib2
 PyPDF2
+xeus-python

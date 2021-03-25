@@ -13,5 +13,6 @@ dependencies:
   - html5lib
   - urllib2
   - PyPDF2
+  - xeus-python
   - pip:
     - cbsodata

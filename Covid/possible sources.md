@@ -13,3 +13,8 @@ https://www.cbs.nl/nl-nl/nieuws/2021/04/bijna-169-duizend-mensen-overleden-in-20
 ### mobiliteit 
 - https://www.google.com/covid19/mobility/ from https://github.com/IJzerenSteen/COMMUNITY_MOBILITY_REPORT_FOR_NL.git
 
+## Other
+https://github.com/minvws/nl-covid19-notification-app-statistics
+
+## RIVM
+https://github.com/minvws/nl-covid19-data-backend-processing/blob/master/functional_doc.md
