@@ -30,10 +30,10 @@ find $PWD -name environment.yaml
 echo ""
 
 #check for conda
-cd Covid # for testing script with Covid notebook repo.
+cd ~/notebooks/Covid # for testing script with Covid notebook repo.
 if [[ -f ./environment.yaml ]]; then
     envName=$(awk '/name/ {print $2}' environment.yaml)
-    echo $ENV_NAME
+    echo "Environment named '$envName' will be installed"
     conda env create -f environment.yaml
 elif [[ $(which conda) != "" ]]; then
     read -p "What is the name for the enviroment? " envName
@@ -45,16 +45,17 @@ elif [[ $(which conda) != "" ]]; then
     fi
     read -p "Are there any other options for conda create? [leave empty for None] " options
     conda create -n $envName $packages $options -y -q
-    source /opt/conda/bin/activate $envName
+    source ~/miniconda3/bin/activate $envName
     conda config --add channels conda-forge
+    conda deactivate
 else
     echo "DO PIP & virtual env --> still needs to be coded"
 fi
 
 echo "Setting up kernel"
-read -p "What is the name for the kernel? " kernelName
+#read -p "What is the name for the kernel? " kernelName
 read -p "What name should be displayed in Jupyter? " displayName 
-read -p "What location should the kernel be installed? [leave empty for default] " location
+#read -p "What location should the kernel be installed? [leave empty for default] " location
 
 if [[ $location == "" ]]; then
     prefix=""
@@ -70,10 +71,9 @@ else
     displayNameOption="--display-name $displayName"
 fi
 
-python -m ipykernel install --name $kernelName
+source ~/miniconda3/bin/activate $envName
+python -m ipykernel install --name $envName --display-name $displayName
 conda deactivate
-
-
 
 << COMMENT
 echo "DEBUG"
