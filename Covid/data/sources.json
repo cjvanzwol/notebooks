@@ -1,0 +1,62 @@
+{
+    "CBS": {
+        "deceased": "70895ned",
+        "population": "37230ned"
+       },
+    "RIVM": {
+        "counts per municipality": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_aantallen_gemeente_per_dag.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/5f6bc429-1596-490e-8618-1ed8fd768427"
+        },
+        "prevalence": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_prevalentie.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/097155aa-75eb-4caa-8ed3-4c6edb80467e"
+        },
+        "r": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_reproductiegetal.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/ed0699d1-c9d5-4436-8517-27eb993eab6e"
+        },
+        "homes for elderly": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_verpleeghuizen.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/0179dd26-7bf6-4021-857f-8623aaf8e73a"
+        },
+        "homes for disabled": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_gehandicaptenzorg.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/aa28b74d-7150-47bc-a7cb-98876e93381b"
+        },
+        "seventy_plus living at home": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_thuiswonend_70plus.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/40508e17-7296-4f39-ad25-8ddd0c904087"
+        },
+        "sewage": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_rioolwaterdata.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/a2960b68-9d3f-4dc3-9485-600570cd52b9"
+        },
+        "support and behavior": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_gedrag.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/8a72d78a-fcf8-4882-b0ab-cd594961a267?tab=relations"
+        }
+    },
+    "NICE": {
+        "hospital admission": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_ziekenhuisopnames.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/4f4ad069-8f24-4fe8-b2a7-533ef27a899f"
+        },
+        "ic admission": {
+            "data": "https://data.rivm.nl/covid-19/COVID-19_ic_opnames.json",
+            "meta": "https://data.rivm.nl/geonetwork/srv/dut/catalog.search#/metadata/45f911c4-3a62-42f1-b594-524a75db2c94"
+        }
+    },
+    "LCPS": {
+        "hospital occupation": {
+            "data": "https://lcps.nu/wp-content/uploads/covid-19.csv",
+            "meta": "https://lcps.nu/datafeed/"
+        }
+    },
+    "Nivel": {
+        "general practioner": {
+            "data": "https://www.nivel.nl/sites/default/files/covid/Nivel-verdenkingen-COVID-19.json",
+            "meta": "https://www.nivel.nl/nl/nivel-zorgregistraties-eerste-lijn/monitor-cijfers-covid-19-achtige-klachten-huisartsenpraktijken#opendata"
+        }
+    }
+}

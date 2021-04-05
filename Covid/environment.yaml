@@ -8,10 +8,12 @@ dependencies:
   - matplotlib
   - ipympl
   - tabula-py
+  - scipy
   - lxml
   - beautifulsoup4
   - html5lib
   - PyPDF2
   - xeus-python
+  - seaborn
   - pip:
     - cbsodata
