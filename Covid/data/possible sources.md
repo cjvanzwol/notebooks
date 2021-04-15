@@ -16,5 +16,11 @@ https://www.cbs.nl/nl-nl/nieuws/2021/04/bijna-169-duizend-mensen-overleden-in-20
 ## Other
 https://github.com/minvws/nl-covid19-notification-app-statistics
 
+### KNMI
+#### Humidity and spread
+aanleiding: https://www.instagram.com/tv/CNgOF3ijdnO/?igshid=k5asmpzpqfy4
+https://dataplatform.knmi.nl/catalog/index.html
+
+
 ## RIVM
 https://github.com/minvws/nl-covid19-data-backend-processing/blob/master/functional_doc.md
