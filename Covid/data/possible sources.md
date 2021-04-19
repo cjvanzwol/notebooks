@@ -2,6 +2,7 @@
 
 ## nederland
 https://www.volksgezondheidenzorg.info/kosten-van-ziekten#node-zorguitgaven-nederland
+https://www.instagram.com/p/CNy6hT4DcpN/?igshid=13k70f6pndwea
 
 https://www.cbs.nl/nl-nl/nieuws/2021/04/bijna-169-duizend-mensen-overleden-in-2020-10-procent-meer-dan-verwacht
 
@@ -15,6 +16,7 @@ https://www.cbs.nl/nl-nl/nieuws/2021/04/bijna-169-duizend-mensen-overleden-in-20
 
 ## Other
 https://github.com/minvws/nl-covid19-notification-app-statistics
+https://www.volksgezondheidenzorg.info/onderwerp/ziekenhuiszorg/cijfers-context/trend-aanbod
 
 ### KNMI
 #### Humidity and spread

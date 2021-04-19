@@ -15,6 +15,7 @@ dependencies:
   - PyPDF2
   - xeus-python
   - seaborn
+  - tqdm
   - pip:
     - cbsodata
     - epyestim

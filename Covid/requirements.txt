@@ -11,3 +11,4 @@ PyPDF2
 xeus-python
 seaborn
 epyestim
+tqdm
